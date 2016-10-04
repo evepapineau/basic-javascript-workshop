@@ -1,7 +1,7 @@
 //Write a function that takes a string and returns the first character of the string. 
 
 function string(firstCharacter) {
-    return firstCharacter.substring(0,1)
+    return firstCharacter.substring(0, 1)
 };
 
 console.log(string("Eve"));
@@ -30,7 +30,7 @@ function number(num1, num2) {
     return num1 + num2;
 }
 
-console.log(number(2,3));
+console.log(number(2, 3));
 
 //Write a function that takes two numbers and multiplies them together.
 
@@ -46,7 +46,7 @@ console.log(number(2, 4));
 //If the string is ‘div’, return the ratio. Otherwise return 0.
 
 function math(num1, num2, string) {
-    switch(string) {
+    switch (string) {
         case 'add':
             return num1 + num2;
         case 'substract':
@@ -65,7 +65,7 @@ function math(num1, num2, string) {
 //Write a function that takes a string, and returns the reverse of that string.
 
 function reverse(string) {
-    var word ="";
+    var word = "";
     for (var i = word.length - 1; i >= 0; i--) {
         word += string[i];
     }
@@ -79,15 +79,15 @@ function reverse(string) {
 function factorial(number) {
     if (number > 0) {
         var number1 = 1;
-        for (var i=number; i >= 1; i--) {
+        for (var i = number; i >= 1; i--) {
             number1 *= i;
         }
-    return number1;
+        return number1;
     }
     else {
-          return 1;  
+        return 1;
     }
-} 
+}
 
 //console.log(factorial(5));
 
@@ -96,11 +96,11 @@ function factorial(number) {
 function phrase(string) {
     var split = string.split("");
     var longuestWord = 0;
-    for (var i=0; i < split.length; i++) {
+    for (var i = 0; i < split.length; i++) {
         if (split[i].length > longuestWord) {
             longuestWord = split[i].length;
         }
-    return longuestWord;
+        return longuestWord;
     }
 }
 
@@ -111,10 +111,10 @@ function phrase(firstLetter) {
     firstLetter = firstLetter.toLowerCase();
     firstLetter = firstLetter.split(" ");
     for (var i = 0; i < firstLetter.length; i++) {
-        firstLetter[i] = firstLetter[i][0].toUpperCase()+firstLetter[i].substring(1);
-        
+        firstLetter[i] = firstLetter[i][0].toUpperCase() + firstLetter[i].substring(1);
+
     }
-    return firstLetter; 
+    return firstLetter;
 }
 
 
@@ -125,8 +125,8 @@ function biggestNumb(array) {
     var biggest = 0;
     for (var i = 0; i < array.length; i++) {
         if (array[i] > biggest) {
-           biggest = array[i];
-           array.push[i];
+            biggest = array[i];
+            array.push[i];
         }
     }
     return biggest;
@@ -137,19 +137,39 @@ function biggestNumb(array) {
 function filtered(array) {
     return array.filter(function(num) {
         return num > 0;
-        });
+    });
 }
 
-console.log(filtered([-4,7,9,-8]));
+console.log(filtered([-4, 7, 9, -8]));
 
 //Write a function that takes an array of numbers, and returns the sum of all the numbers in the array.
 
 function sum(array) {
     var final = 0;
     for (var i = 0; i < array.length; i++) {
-        final =  final + array[i];
+        final = final + array[i];
     }
     return final;
 }
-console.log(sum([6,7,8]));
+console.log(sum([6, 7, 8]));
 
+function noDuplicates(array1, array2) {
+    var newArr = [];
+   
+     for (var i = 0; i < array1.length; i++) {
+            if (array2.indexOf(array1[i]) === -1) {
+                newArr.push(array1[i])
+            }
+        }
+        
+         for (var i = 0; i < array2.length; i++) {
+            if (array1.indexOf(array2[i]) === -1) {
+                newArr.push(array2[i])
+            }
+        }
+
+
+    return newArr;
+}
+
+console.log(noDuplicates([2, 5, 1], [5, 1, 2, 5, 5, 4, 8, 7]));
