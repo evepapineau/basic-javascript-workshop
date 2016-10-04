@@ -131,4 +131,25 @@ function biggestNumb(array) {
     }
     return biggest;
 }
-console.log(biggestNumb([4,10,6]))
+//console.log(biggestNumb([4,10,6]))
+
+//Write a function that takes an array, and returns a filtered array.
+function filtered(array) {
+    return array.filter(function(num) {
+        return num > 0;
+        });
+}
+
+console.log(filtered([-4,7,9,-8]));
+
+//Write a function that takes an array of numbers, and returns the sum of all the numbers in the array.
+
+function sum(array) {
+    var final = 0;
+    for (var i = 0; i < array.length; i++) {
+        final =  final + array[i];
+    }
+    return final;
+}
+console.log(sum([6,7,8]));
+
